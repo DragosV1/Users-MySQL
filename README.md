@@ -16,8 +16,9 @@ $> python -m pip install openpyxl
 
 ## Project structure
 
-database.py
-### This is the module used to handle MySQL connections and data manipulations.
+### `database.py`
+This is the module used to handle MySQL connections and data manipulations.
 
-main.py
-### This is the file that which uses commands such as: Connect, Delete, Insert, Update, Export.
+### `main.py`
+
+This is the file that which uses commands such as: Connect, Delete, Insert, Update, Export.
