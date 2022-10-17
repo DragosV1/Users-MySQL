@@ -29,7 +29,6 @@ def connect():
             print("Connection closed.")
 
 def create_table():
-    """ Create table """
 
     try:
         conn = MySQLConnection(**db_config)
@@ -49,7 +48,6 @@ def create_table():
         conn.close()
 
 def insert_into_table(name: str, password: str):
-    """ Insert into table """
 
     try:
         conn = MySQLConnection(**db_config)
@@ -74,7 +72,6 @@ def insert_into_table(name: str, password: str):
         conn.close()
 
 def update_password(password, id_):
-    """ Update password from table using id """
     
     query = """UPDATE Users 
                 SET passwd = %s
@@ -97,7 +94,6 @@ def update_password(password, id_):
         conn.close()
 
 def update_name(name, id_):
-    """ Update name from table using id """
     
     query = """UPDATE Users 
                 SET name = %s
@@ -120,7 +116,6 @@ def update_name(name, id_):
         conn.close()
 
 def delete_from_table(id_):
-    """ Delete from table using the id"""
 
     query = "DELETE FROM Users WHERE id = %s"
     args = (id_,)
@@ -161,7 +156,6 @@ def fetchall():
         conn.close()
 
 def export_to_excel():
-    """ Export to excel """
 
     conn = MySQLConnection(**db_config)
     cursor = conn.cursor()
